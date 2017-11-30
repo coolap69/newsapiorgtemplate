@@ -1,4 +1,4 @@
-/*global $ APIKEY p*/
+/*global $ APIKEY*/
 $(document).ready(function() {
     $.ajax({
             // method: "GET ",
@@ -18,7 +18,7 @@ $(document).ready(function() {
                 }
             }
      
-        })
+        });
    
         // .done(function(data) {
         //     console.log(data);
@@ -33,16 +33,16 @@ $(document).ready(function() {
                 
                 method: "GET",
                 url: "https://newsapi.org/v2/top-headlines",
-                data: {sources: "bbc-news", apiKey: APIKEY },
+                data: {sources: document.getElementById("selection").value, apiKey: APIKEY },
                 success: function(data) {
                 if(data.status === "ok") {
                     console.log(data)
                     
                     for (var i = 0; i < data.articles.length; i++) {
-                        var headline = document.createElement(p);
+                        var headline = document.createElement("p");
                         
                         headline.innerHTML = data.articles[i].title;
-                        document.getElementById("buss").appendChild(headline)
+                        document.getElementById("buss").appendChild(headline);
                     }
                 }
                  }
