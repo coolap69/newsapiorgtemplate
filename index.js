@@ -28,6 +28,7 @@ $(document).ready(function() {
         $('#source').submit( function(event) {
             event.preventDefault();
             // alert(document.getElementById("selection").value)
+            document.getElementById("list").innerHTML = "";
             
             $.ajax({
                 
@@ -39,10 +40,23 @@ $(document).ready(function() {
                     console.log(data)
                     
                     for (var i = 0; i < data.articles.length; i++) {
-                        var headline = document.createElement("p");
+                        var headline = document.createElement("li");
+                        var description = document.createElement("p");
+                        var url = document.createElement("p");
+                        
+                        
                         
                         headline.innerHTML = data.articles[i].title;
-                        document.getElementById("buss").appendChild(headline);
+                        description.innerHTML = data.articles[i].description;
+                        url.innerHTML = data.articles[i].url;
+                        
+                        document.getElementById("list").appendChild(headline);
+                        document.getElementById("list").appendChild(description);
+                        document.getElementById("list").appendChild(url);
+
+
+                        
+
                     }
                 }
                  }
