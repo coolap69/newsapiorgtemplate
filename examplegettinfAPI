@@ -1,0 +1,8 @@
+https://newsapi.org/v2/sources?apiKey=99380a1ec6744c4bb50c36ed187bacfd
+
+url: "https://newsapi.org/v2/sources",
+data: { category: "technology", country: "us", language: "en", apiKey: APIKEY },
+
+https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=99380a1ec6744c4bb50c36ed187bacfd
+url:""
+data: {},

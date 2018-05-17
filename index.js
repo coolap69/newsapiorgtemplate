@@ -52,9 +52,7 @@ $(document).ready(function() {
                         
                         document.getElementById("list").appendChild(headline);
                         document.getElementById("list").appendChild(description);
-                        document.getElementById("list").appendChild(url);
-
-
+                        document.getElementById("list").appendChild(url)
                         
 
                     }
